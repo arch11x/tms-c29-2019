@@ -2,18 +2,33 @@ package tms.c29;
 
 public class TestMain {
     public static void main(String[] args) {
-        System.out.println("Test");
-        System.out.println(8<<1);
+        byte myByte = 127;
 
-        boolean b = true;
-        double d = 100;
+        short myShort = 1000;
 
-        int x = (int) d;
+        char myCharNum = 33;
+        char myCharSym = 'K';
+        char myCharUTF8 = '\uf000';
 
-        char c = '\u039A';
-        System.out.println(c);
+        System.out.println(myCharNum);
+        System.out.println(myCharSym);
+        System.out.println("myCharUTF8=" + (int) myCharUTF8);
+        System.out.println(myCharUTF8);
 
-        c = 33;
-        System.out.println(c);
+        System.out.println(myCharNum + myShort);
+        System.out.println(myCharUTF8 + myShort);
+
+        int myInt = 0;
+
+        long myLong = 9223372036854775807L;
+
+        double myDouble = 12.0;
+        float myFloat = 13.0f;
+
+        boolean myBoolean = true;
+        myBoolean = false;
+        System.out.println(myBoolean);
+
+        String myString = "Hello World";
     }
 }
