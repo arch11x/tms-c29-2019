@@ -30,5 +30,8 @@ public class TestMain {
         System.out.println(myBoolean);
 
         String myString = "Hello World";
+
+        // -510+256...
+        System.out.println(("byte = " + (byte) -510));
     }
 }
