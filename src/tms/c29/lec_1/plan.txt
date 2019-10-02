@@ -15,6 +15,7 @@ https://stackoverflow.com/
 https://metanit.com/java/tutorial/2.12.php
 
 Ссылка на гугл диск:
+https://drive.google.com/drive/u/2/folders/1Y1bz_6C9QfzgpUUJaOi7YbLj83RzZdhV
 
 Скачать 11 JDK: https://jdk.java.net/java-se-ri/11
 JDK installer: https://adoptopenjdk.net/index.html?variant=openjdk11&jvmVariant=hotspot
