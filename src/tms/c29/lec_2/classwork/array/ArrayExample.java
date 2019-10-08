@@ -11,6 +11,7 @@ public class ArrayExample {
         }
         System.out.println(Arrays.toString(array));
 
+        
 
         int index = 0;
         double[] doubles = new double[10];
