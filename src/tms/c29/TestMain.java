@@ -1,7 +1,7 @@
 package tms.c29;
 
 public class TestMain {
-    public static void main(String[] args) {
+    public static void main(String... args) {
         byte myByte = 127;
 
         short myShort = 1000;
@@ -33,5 +33,7 @@ public class TestMain {
 
         // -510+256...
         System.out.println(("byte = " + (byte) -510));
+
+        int[] ints = new int[] {1, 2, 3};
     }
 }
