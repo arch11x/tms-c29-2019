@@ -3,55 +3,51 @@ package tms.c29;
 import java.util.Arrays;
 
 public class TestMain {
-    public static void main(String... args) {
-        int[] ints = {2, 3, 0, 1, 4, 8, 7, 9, 0, 4, 8, 6};
-
-        int iterCounter = 0;
-//        for (int i = 0; i < ints.length; i++) {
-//            for (int j = 1; j < ints.length - i; j++) {
-//                iterCounter++;
-//                if (ints[j] < ints[j - 1]) {
-//                    int temp = ints[j];
-//                    ints[j] = ints[j - 1];
-//                    ints[j - 1] = temp;
-//                }
-//            }
-//        }
-//
-//        System.out.println(Arrays.toString(ints));
-//        System.out.println("counter: " + iterCounter);
-//
-//        ints = new int[]{2, 3, 0, 1};
-//
-        iterCounter = 0;
-
-        boolean needIteration = true;
-        while (needIteration) {
-            needIteration = false;
-            for (int i = 1; i < ints.length; i++) {
-                iterCounter++;
-                if (ints[i] < ints[i - 1]) {
-                    int temp = ints[i];
-                    ints[i] = ints[i - 1];
-                    ints[i - 1] = temp;
-
-                    needIteration = true;
-                }
-            }
-        }
-
-        System.out.println(Arrays.toString(ints));
-        System.out.println("counter: " + iterCounter);
-
-        int[][] twoDimensional = new int[3][];
-
-        for (int i = 0; i < twoDimensional.length; i++) {
-            twoDimensional[i] = new int[i + 1];
-            for (int j = 0; j < twoDimensional[i].length; j++) {
-                System.out.print(twoDimensional[i][j] + " ");
+    public static void main(String[] args) {
+        int a=4;
+        for(int i=1; i<=a;i++){
+            for(int k=1; k<=a; k++){
+                if(k<=a-i)
+                    System.out.print(" ");
+                else
+                    System.out.print("*");
             }
             System.out.println();
         }
+        System.out.println();
+
+        for(int b=1; b<=a;b++){
+            for(int c=1; c<=a; c++){
+                if(c>=b)
+                    System.out.print("*");
+                else
+                    System.out.print(" ");
+            }
+            System.out.println();
+        }
+        System.out.println();
+
+        for(int d=1; d<=a;d++){
+            for(int e=1; e<=a; e++){
+                if(e<=d)
+                    System.out.print("*");
+                else
+                    System.out.print(" ");
+            }
+            System.out.println();
+        }
+        System.out.println();
+
+        for(int f=1; f<=a;f++){
+            for(int g=1; g<=a; g++){
+                if(f<=a-g+1)
+                    System.out.print("*");
+                else
+                    System.out.print(" ");
+            }
+            System.out.println();
+        }
+        System.out.println();
 
     }
 }
