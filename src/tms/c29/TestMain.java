@@ -40,10 +40,11 @@ public class TestMain {
 //        System.out.println(Arrays.toString(ints));
 //        System.out.println("counter: " + iterCounter);
 
-        int[][] ints = new int[3][2];
+        int[][] ints = new int[3][];
 
         for (int i = 0; i < ints.length; i++) {
-            for (int j = 0; j < ints[j].length; j++) {
+            ints[i] = new int[i + 1];
+            for (int j = 0; j < ints[i].length; j++) {
                 System.out.print(ints[i][j] + " ");
             }
             System.out.println();
