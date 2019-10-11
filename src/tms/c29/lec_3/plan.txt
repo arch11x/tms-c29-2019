@@ -1,0 +1,5 @@
+1. Сортировка пузырьком
+2. Быстрая сортировка (quick sort)
+
+Info:
+https://javarush.ru/groups/posts/1997-algoritmih-sortirovki-v-teorii-i-na-praktike
