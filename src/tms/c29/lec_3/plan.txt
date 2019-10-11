@@ -1,5 +1,7 @@
-1. Сортировка пузырьком
-2. Быстрая сортировка (quick sort)
+1. Массивы, инициализация, доступ к элементу, for-each, печать, двумерные массивы
+2. Сортировка пузырьком
+3. Быстрая сортировка (quick sort)
+4. Class scanner
 
 Info:
 https://javarush.ru/groups/posts/1997-algoritmih-sortirovki-v-teorii-i-na-praktike
