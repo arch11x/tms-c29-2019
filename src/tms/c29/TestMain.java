@@ -1,10 +1,12 @@
 package tms.c29;
 
+import java.util.Arrays;
+
 public class TestMain {
     public static void main(String... args) {
-//        int[] ints = {2, 3, 0, 1, 6, 6, 6, 6, 6, 6, 6, 6};
-//
-//        int iterCounter = 0;
+        int[] ints = {2, 3, 0, 1, 4, 8, 7, 9, 0, 4, 8, 6};
+
+        int iterCounter = 0;
 //        for (int i = 0; i < ints.length; i++) {
 //            for (int j = 1; j < ints.length - i; j++) {
 //                iterCounter++;
@@ -21,31 +23,32 @@ public class TestMain {
 //
 //        ints = new int[]{2, 3, 0, 1};
 //
-//        iterCounter = 0;
-//        boolean needIteration = true;
-//        while (needIteration) {
-//            needIteration = false;
-//            for (int i = 1; i < ints.length; i++) {
-//                iterCounter++;
-//                if (ints[i] < ints[i - 1]) {
-//                    int temp = ints[i];
-//                    ints[i] = ints[i - 1];
-//                    ints[i - 1] = temp;
-//
-//                    needIteration = true;
-//                }
-//            }
-//        }
-//
-//        System.out.println(Arrays.toString(ints));
-//        System.out.println("counter: " + iterCounter);
+        iterCounter = 0;
 
-        int[][] ints = new int[3][];
+        boolean needIteration = true;
+        while (needIteration) {
+            needIteration = false;
+            for (int i = 1; i < ints.length; i++) {
+                iterCounter++;
+                if (ints[i] < ints[i - 1]) {
+                    int temp = ints[i];
+                    ints[i] = ints[i - 1];
+                    ints[i - 1] = temp;
 
-        for (int i = 0; i < ints.length; i++) {
-            ints[i] = new int[i + 1];
-            for (int j = 0; j < ints[i].length; j++) {
-                System.out.print(ints[i][j] + " ");
+                    needIteration = true;
+                }
+            }
+        }
+
+        System.out.println(Arrays.toString(ints));
+        System.out.println("counter: " + iterCounter);
+
+        int[][] twoDimensional = new int[3][];
+
+        for (int i = 0; i < twoDimensional.length; i++) {
+            twoDimensional[i] = new int[i + 1];
+            for (int j = 0; j < twoDimensional[i].length; j++) {
+                System.out.print(twoDimensional[i][j] + " ");
             }
             System.out.println();
         }
