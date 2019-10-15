@@ -1,53 +1,37 @@
 package tms.c29;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class TestMain {
-    public static void main(String[] args) {
-        int a=4;
-        for(int i=1; i<=a;i++){
-            for(int k=1; k<=a; k++){
-                if(k<=a-i)
+    public static void main (String[] args) {
+        int height;
+        System.out.println("Enter height: ");
+        Scanner in = new Scanner(System.in);
+        height = in.nextInt();
+        int width;
+        System.out.println("Enter weight: ");
+        width = in.nextInt();
+        int count;
+        for (int i = 0; i < height; i++) {
+            for (int j = 0; j < width; j++) {
+                if (i >= height / 2) {
+                    count = height - i - 1;
+                } else {
+                    count = i;
+                }
+                if ((j <= count) || (j >= width - count - 1)) {
+                    if (j >= width / 2) {
+                        count = width - j;
+                    } else {
+                        count = j + 1;
+                    }
+                    System.out.print(count);
+                } else {
                     System.out.print(" ");
-                else
-                    System.out.print("*");
+                }
             }
             System.out.println();
         }
-        System.out.println();
-
-        for(int b=1; b<=a;b++){
-            for(int c=1; c<=a; c++){
-                if(c>=b)
-                    System.out.print("*");
-                else
-                    System.out.print(" ");
-            }
-            System.out.println();
-        }
-        System.out.println();
-
-        for(int d=1; d<=a;d++){
-            for(int e=1; e<=a; e++){
-                if(e<=d)
-                    System.out.print("*");
-                else
-                    System.out.print(" ");
-            }
-            System.out.println();
-        }
-        System.out.println();
-
-        for(int f=1; f<=a;f++){
-            for(int g=1; g<=a; g++){
-                if(f<=a-g+1)
-                    System.out.print("*");
-                else
-                    System.out.print(" ");
-            }
-            System.out.println();
-        }
-        System.out.println();
-
     }
 }
