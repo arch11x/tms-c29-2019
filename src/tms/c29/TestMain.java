@@ -1,37 +1,31 @@
 package tms.c29;
 
 import java.util.Arrays;
-import java.util.Scanner;
 
 public class TestMain {
-    public static void main (String[] args) {
-        int height;
-        System.out.println("Enter height: ");
-        Scanner in = new Scanner(System.in);
-        height = in.nextInt();
-        int width;
-        System.out.println("Enter weight: ");
-        width = in.nextInt();
-        int count;
-        for (int i = 0; i < height; i++) {
-            for (int j = 0; j < width; j++) {
-                if (i >= height / 2) {
-                    count = height - i - 1;
-                } else {
-                    count = i;
-                }
-                if ((j <= count) || (j >= width - count - 1)) {
-                    if (j >= width / 2) {
-                        count = width - j;
-                    } else {
-                        count = j + 1;
-                    }
-                    System.out.print(count);
-                } else {
-                    System.out.print(" ");
-                }
+    public static void main (String[] args)
+    {
+        /*При помощи двумерного массива вывести на экран таблицу умножения*/
+        // int[][] array = new int[9][9];
+        int [] [] array = {{1,2,3,4,5,6,7,8,9},
+                {1,2,3,4,5,6,7,8,9},
+                {1,2,3,4,5,6,7,8,9},
+                {1,2,3,4,5,6,7,8,9},
+                {1,2,3,4,5,6,7,8,9},
+                {1,2,3,4,5,6,7,8,9},
+                {1,2,3,4,5,6,7,8,9},
+                {1,2,3,4,5,6,7,8,9},
+                {1,2,3,4,5,6,7,8,9}};//объявление двумерного массива
+        int multiplication;//объявление переменной для умножения
+        System.out.println("Таблица умножения: ");
+        for (int i =0; i < array.length; i++)
+        {
+            for (int j =0; j< array.length; j++)
+            {
+                multiplication = array[i][j] * array [j][i];//вычисление произведения
+                System.out.println(array[i][j] + " " + array[j][i] + " "+ multiplication);//вывод
             }
-            System.out.println();
         }
     }
+
 }
