@@ -1,4 +1,4 @@
-package tms.c29.lec_6.classwork.point_1.point_4;
+package tms.c29.lec_6.classwork.point_4;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;

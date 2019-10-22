@@ -1,4 +1,4 @@
-package tms.c29.lec_6.classwork.point_1.point_3;
+package tms.c29.lec_6.classwork.point_3;
 
 public class RecursionExample {
     public static void main(String[] args) {
