@@ -4,14 +4,20 @@ import java.util.Arrays;
 
 public class TestMain {
     public static void main(String[] args) {
-        int[] ints = {2, 3, 4};
+        int[] array = {1, 2, 3, 10};
+        recursionOutput(array, 0);
 
-        int[] ints1 = Arrays.copyOf(ints, ints.length);
-        System.out.println(Arrays.toString(ints1));
+        System.out.println(String.class.getTypeName());
+    }
 
-        ints1[0] = 66;
-
-        System.out.println(Arrays.toString(ints));
+    // думаю этот метод может быть void,
+    private static int recursionOutput(int[] array, int index) {
+        System.out.print(array[index] + "\t");
+        index++;
+        if (index < array.length) {
+            index = recursionOutput(array, index);
+        }
+        return index;
     }
 
 }

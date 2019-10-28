@@ -12,5 +12,12 @@ public class StringBuilderBufferExample {
         // your code
         long finish = System.currentTimeMillis();
         System.out.println(finish);
+
+        boolean b = true;
+        if (b = false) {
+
+        }
+
+        System.out.println(b);
     }
 }

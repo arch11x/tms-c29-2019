@@ -27,5 +27,6 @@ public class StringExample {
         System.out.println("Pineapple".substring(3));
         System.out.println("Pineapple".substring(4, 7));
 
+
     }
 }
