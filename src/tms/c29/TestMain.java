@@ -4,20 +4,27 @@ import java.util.Arrays;
 
 public class TestMain {
     public static void main(String[] args) {
-        int[] array = {1, 2, 3, 10};
-        recursionOutput(array, 0);
+        String text = "While major gameplay components are already in place and functioning,\n" +
+                "players help is needed to add some of the smaller features and content.\n" +
+                "Of course polishing the overall experience is important at the same time.\n" +
+                "Game has been extensively tested in closed group, but it is always important to hear fresh suggestions\n" +
+                "from larger crowd that come from various gaming backgrounds.\n" +
+                "Plan is to make the game as good as possible but without compromising the core idea.";
 
-        System.out.println(String.class.getTypeName());
-    }
+        String textLow = text.toLowerCase();
+        String[] wordsArray = new String[]{"alert", "add", "good", "plan"};
 
-    // думаю этот метод может быть void,
-    private static int recursionOutput(int[] array, int index) {
-        System.out.print(array[index] + "\t");
-        index++;
-        if (index < array.length) {
-            index = recursionOutput(array, index);
+        int count = 0;
+
+        for (int i = 0; i < wordsArray.length; i++) {
+            String word = wordsArray[i];
+            int index = textLow.indexOf(word);
+            if (index != -1) {
+                count++;
+                System.out.println("Word '" + wordsArray[i] + "' repeates " + count + " time(s)");
+            } else {
+                System.out.println("No such word as '" + wordsArray[i] + "'");
+            }
         }
-        return index;
     }
-
 }
