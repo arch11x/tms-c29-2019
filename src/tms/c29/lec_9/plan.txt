@@ -9,9 +9,9 @@ Part_2
 4. Классы ByteArrayInputStream и ByteArrayOutputStream
 5. Буферизованные потоки BufferedInputStream и BufferedOutputStream
 6. Классы DataOutputStream и DataInputStream
-7. Чтение и запись текстовых файлов
+7. Чтение и запись текстовых файлов (FileReader, FileWriter)
 8. Буферизация символьных потоков. BufferedReader и BufferedWriter
-9. Сериализация
+9. Сериализация (ObjectInputStream, ObjectOutputStream)
 10. Класс File. Работа с файлами и каталогами
 11. Работа с ZIP-архивами
 
