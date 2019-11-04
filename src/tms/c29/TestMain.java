@@ -29,7 +29,6 @@ public class TestMain {
             } catch (IndexOutOfBoundsException e) {
 //                throw new MyCustomException("Error in array dimension");
             }
-            System.out.println("sex");
         }
     }//я не разобралась,что мне надо добавить,чтобы после Exception просило ввести еще раз.
 }
