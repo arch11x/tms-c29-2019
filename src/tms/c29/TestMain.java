@@ -2,42 +2,34 @@ package tms.c29;
 
 import tms.c29.lec_8.classwork.point_4.MyCustomException;
 
-import java.util.ArrayList;
+import java.io.File;
 import java.util.Arrays;
-import java.util.List;
 import java.util.Scanner;
 
 public class TestMain {
     private static final int MAX_ARRAY_SIZE = 10;
 
-    public static void main(String[] args) {
-        List<Integer> integers = new ArrayList<>();
-        integers.add(11);
-        integers.add(12);
-        List<? super Integer> list = integers;
-        System.out.println(list);
-        list.add(null);
-        list.add(1);
-
-        Object object = list.get(0);
-
-
-        List<?> genericList = integers;
-        genericList.add(null);
-//        genericList.add(1);
-        Object o = genericList.get(0);
-
-        List<Integer> put = put(integers);
-        System.out.println(put);
-    }
-
-    private static <T extends Number> List<T> put(List<T> list) {
-        List<T> arr = list;
-
-        arr.add(null);
-        T t = arr.get(0);
-        System.out.println(t.getClass().getName());
-
-        return list;
-    }
+    public static void main(String[] args) throws MyCustomException {
+        Boolean flag = true; // я думаю здесь можно обойтись примитивом boolean
+        while (flag) {
+            System.out.println("Please enter array dimension: ");
+            Scanner scanner = new Scanner(System.in);
+            int size = scanner.nextInt();
+            try {
+                // я бы предложил тебе проверку числа вынести в отдельный метод из которого выбрасывать исключение и затем создавать массив в main()
+                if (size > 0 && size < 10) {
+                    int[] array = new int[size];
+                    for (int i = 0; i < size; i++) {
+                        array[i] = (int) (Math.random() * 10);
+                    }
+                    System.out.println(Arrays.toString(array));
+                } else {
+                    throw new IndexOutOfBoundsException("Error in array dimension");
+                }
+                flag=false;
+            } catch (IndexOutOfBoundsException e) {
+//                throw new MyCustomException("Error in array dimension");
+            }
+        }
+    }//я не разобралась,что мне надо добавить,чтобы после Exception просило ввести еще раз.
 }
