@@ -1,4 +1,4 @@
-package tms.c29.lec_10.classwork.point_2;
+package tms.c29.lec_10.classwork.point_7;
 
 import java.util.Arrays;
 

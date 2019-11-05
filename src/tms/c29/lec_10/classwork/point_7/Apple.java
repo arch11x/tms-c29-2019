@@ -1,4 +1,4 @@
-package tms.c29.lec_10.classwork.point_2;
+package tms.c29.lec_10.classwork.point_7;
 
 public enum Apple {
     RED(12, "USA") {
