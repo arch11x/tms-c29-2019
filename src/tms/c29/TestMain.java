@@ -2,6 +2,7 @@ package tms.c29;
 
 import tms.c29.lec_8.classwork.point_4.MyCustomException;
 
+import java.io.File;
 import java.util.Arrays;
 import java.util.Scanner;
 
