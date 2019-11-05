@@ -1,22 +1,16 @@
 package tms.c29.lec_10.classwork.point_1;
 
-public class Account<T, E, D extends Nationality> {
+public class Account<T, S extends Number> {
     private T id;
-    private E iban;
-    private D person;
+    private S sum;
 
-    public Account(T id, E iban, D person) {
+    private String country;
+
+    public <D> Account(T id, S sum, D country) {
         this.id = id;
-        this.iban = iban;
-        this.person = person;
-    }
+        this.sum = sum;
 
-    public D getPerson() {
-        return person;
-    }
-
-    public void setPerson(D person) {
-        this.person = person;
+        this.country = country.toString();
     }
 
     public T getId() {
@@ -27,35 +21,38 @@ public class Account<T, E, D extends Nationality> {
         this.id = id;
     }
 
-    public E getIban() {
-        return iban;
+    public S getSum() {
+        return sum;
     }
 
-    public void setIban(E iban) {
-        this.iban = iban;
+    public void setSum(S sum) {
+        this.sum = sum;
     }
 
     public static void main(String[] args) {
-        Belorus belorus = new Belorus("belorus");
-        Russian russian = new Russian("russian");
+        Account<String, Double> accountString = new Account<>("UUID", 1232.0, "USA");
+        Account<Integer, Integer> accountInt = new Account<>(123, 650, 777);
+        Account<InternalId, Integer> accountInternalId = new Account<>(new InternalId(), 650, 777);
 
-        Account<Integer, String, Nationality> account_1 = new Account<>(123, "#344", belorus);
-        Account<Integer, String, Belorus> account_2 = new Account<>(123, "#344", belorus);
-        Account<String, String, Russian> account_3 = new Account<>("123", "#344", russian);
+        Double sum = accountString.getSum();
+        String id = accountString.getId();
 
-        boolean isEquals = isEquals(account_1, account_2);
-
-        System.out.println("account_1 == account_2: " + isEquals);
+        showElem("Hello");
     }
 
-    private static boolean isEquals(
-            Account<Integer, String, ? extends Nationality> account_1,
-            Account<Integer, String, ? extends Nationality> account_2
-    ) {
-        return account_1.getId().equals(account_2.getId());
+    private static <E> E showElem(E elem) {
+        System.out.println(elem.getClass().getName());
+        System.out.println(elem);
+        return elem;
     }
+}
 
-    public <C> void showType(C type) {
-        System.out.println(type.getClass().getName());
+class UserAccount<T, S extends Number, D> extends Account<T, S> {
+    public UserAccount(T id, S sum, D country) {
+        super(id, sum, country);
     }
+}
+
+class InternalId {
+    private String name;
 }
