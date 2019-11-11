@@ -26,5 +26,8 @@ public class AppleCheckMain {
 
         System.out.println(enumApple.toPounds());
 
+        String country = Apple.GREEN.getCountry();
+        Apple.GREEN.setCountry("Tratata");
+        System.out.println(Apple.GREEN.getCountry());
     }
 }

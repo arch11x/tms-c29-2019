@@ -25,7 +25,8 @@ public class Account<T, S extends Number> {
         return sum;
     }
 
-    public void setSum(S sum) {
+    public void setSum(S sum, Class<String> stringClass) {
+        int x = 0;
         this.sum = sum;
     }
 
@@ -34,6 +35,7 @@ public class Account<T, S extends Number> {
         Account<Integer, Integer> accountInt = new Account<>(123, 650, 777);
         Account<InternalId, Integer> accountInternalId = new Account<>(new InternalId(), 650, 777);
 
+        accountInt.setSum(100, String.class);
         Double sum = accountString.getSum();
         String id = accountString.getId();
 
