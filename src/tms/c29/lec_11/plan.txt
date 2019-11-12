@@ -35,6 +35,7 @@ ArrayList:
 Info:
 https://metanit.com/java/tutorial/5.1.php
 https://habr.com/ru/post/162017/
+https://habr.com/ru/post/237043/
 https://www.javatpoint.com/collections-in-java
 
 Про компаратор == 0
