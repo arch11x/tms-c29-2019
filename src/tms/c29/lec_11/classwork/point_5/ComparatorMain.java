@@ -24,5 +24,7 @@ public class ComparatorMain {
         booksCustom.add(new Book("Potter", "Aushkin", 2001));
 
         System.out.println(booksCustom);
+
+
     }
 }
