@@ -4,6 +4,9 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeFormatterBuilder;
+import java.util.List;
+import java.util.Locale;
 import java.util.Set;
 
 public class LocalDateTimeExample {
@@ -22,12 +25,17 @@ public class LocalDateTimeExample {
         System.out.println("Etc/GMT+9: " + time.atZone(ZoneId.of("Etc/GMT+9")));
 
 
-        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MMM/yyyy");
-        LocalDate parse = LocalDate.parse("20/Dec/1999", dtf);
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd-MMM-yyyy", Locale.US);
 
-        String formatted = parse.format(dtf);
+        DateTimeFormatter dateTimeFormatter = new DateTimeFormatterBuilder().appendPattern("dd-MMM-yyyy").toFormatter();
+
+
+        LocalDate parse = LocalDate.parse("10-Nov-1999", dtf);
+
+
+//        String formatted = parse.format(dtf);
+//        System.out.println(parse);
+
         System.out.println(parse);
-
-        System.out.println(formatted);
     }
 }
