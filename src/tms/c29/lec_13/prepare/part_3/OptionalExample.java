@@ -12,5 +12,6 @@ public class OptionalExample {
 
         Integer integer1 = integer.orElse(3);
         System.out.println("integer1 = " + integer1);
+
     }
 }

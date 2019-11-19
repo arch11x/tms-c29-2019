@@ -2,14 +2,12 @@ package tms.c29.lec_13.entity;
 
 import java.util.Objects;
 
-public class Phone {
+public class PhoneDto {
     private String model;
-    private String producer;
     private int price;
 
-    public Phone(String model, String producer, int price) {
+    public PhoneDto(String model, int price) {
         this.model = model;
-        this.producer = producer;
         this.price = price;
     }
 
@@ -19,14 +17,6 @@ public class Phone {
 
     public void setModel(String model) {
         this.model = model;
-    }
-
-    public String getProducer() {
-        return producer;
-    }
-
-    public void setProducer(String producer) {
-        this.producer = producer;
     }
 
     public int getPrice() {
@@ -46,25 +36,22 @@ public class Phone {
             return false;
         }
 
-        Phone phone = (Phone) o;
-        return price == phone.price && Objects.equals(model, phone.model)
-            && Objects.equals(producer, phone.producer);
+        PhoneDto phoneDto = (PhoneDto) o;
+        return price == phoneDto.price && Objects.equals(model, phoneDto.model);
     }
 
     @Override
     public int hashCode() {
         return Objects.hash(
             model,
-            producer,
             price);
     }
 
     @Override
     public String toString() {
-        return "Phone{" +
-                "model='" + model + '\'' +
-                ", producer='" + producer + '\'' +
-                ", price=" + price +
-                '}';
+        return "PhoneDto{" +
+            "model='" + model + '\'' +
+            ", price=" + price +
+            '}';
     }
 }

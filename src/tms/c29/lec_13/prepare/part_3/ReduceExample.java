@@ -27,17 +27,12 @@ public class ReduceExample {
             .reduce(0,
                 (x, y) -> {
                     if (y.getPrice() < 500) {
-                        System.out.println("y.getPrice() current x=" + x);
                         return x + y.getPrice();
                     } else {
-                        System.out.println("current x=" + x);
                         return x;
                     }
                 },
-                (x, y) -> {
-                    System.out.println("accum current x=" + x);
-                    return x + y;
-                }
+                (x, y) -> x + y
             );
         System.out.println(sum);
 
