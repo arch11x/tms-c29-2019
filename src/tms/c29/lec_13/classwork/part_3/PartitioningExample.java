@@ -13,8 +13,8 @@ public class PartitioningExample {
         phones.add(new Phone("Xs", "Apple", 200));
         phones.add(new Phone("8", "Apple", 400));
         phones.add(new Phone("S10", "Samsung", 350));
-        phones.add(new Phone("S10", "Samsung", 350));
         phones.add(new Phone("3310", "Nokia", 1000));
+        phones.add(new Phone("S10", "Samsung", 350));
 
         Map<Boolean, List<Phone>> collect = phones.stream()
             .collect(Collectors.partitioningBy(phone -> "Samsung".equals(phone.getProducer())));
