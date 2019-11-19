@@ -41,7 +41,7 @@ public class CollectorsExample {
             IntSummaryStatistics value = entry.getValue();
             double average = value.getAverage();
 
-            System.out.println("producer = " + key);
+            System.out.println("\nproducer = " + key);
             System.out.println("average = " + average);
         });
     }

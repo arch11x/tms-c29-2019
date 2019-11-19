@@ -22,5 +22,15 @@ public class FlatMapExample {
                 String.format("Sale price for %s %s is %d \n", phone.getProducer(), phone.getModel(), (int) (phone.getPrice() * 0.9))
             ))
             .forEach(System.out::println);
+
+        long count = phones.stream()
+            .flatMap(phone -> Stream.of(
+                String.format("Normal price for %s %s is %d", phone.getProducer(), phone.getModel(), phone.getPrice()),
+                String.format("Sale price for %s %s is %d \n", phone.getProducer(), phone.getModel(), (int) (phone.getPrice() * 0.9))
+            ))
+            .count();
+
+
+        System.out.println("count = " + count);
     }
 }
