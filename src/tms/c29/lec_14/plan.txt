@@ -6,7 +6,6 @@ Part 2
 Java 11 new
 1. String -> strip, stringLeading, stripTrailing
 2. String -> repeat
-3. var
 
 Part 3
 Test:
