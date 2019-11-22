@@ -15,4 +15,5 @@ https://drive.google.com/open?id=1mdk06-2FN7is27-kFKd5YWBnFAfLvAJfcVA2vu0bQy4
 
 Info:
 https://metanit.com/java/tutorial/11.1.php
+https://habr.com/ru/company/piter/blog/417733/
 https://www.journaldev.com/24601/java-11-features
