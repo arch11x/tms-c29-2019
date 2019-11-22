@@ -2,13 +2,17 @@ package tms.c29;
 
 import tms.c29.lec_12.classwork.part_3.User;
 
+import java.io.IOException;
+import java.nio.charset.Charset;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
 import java.util.function.UnaryOperator;
 
 public class TestMain {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         String pattern = "([APE])(.*)";
         Predicate<String> filter = name -> name.matches(pattern);
 
@@ -40,6 +44,10 @@ public class TestMain {
         System.out.println(s.stripTrailing().length());
         System.out.println(s.trim().length());
         System.out.println(s.repeat(10));
+
+        String s1 = Files.readString(Path.of("/Users/alexfomin/IdeaProjects/tms/tms-c29-2019/src/tms/c29/lec_14/plan.txt"), Charset.defaultCharset());
+        System.out.println(s1);
+
     }
 
     private static void show(List<Integer> integerList) {
