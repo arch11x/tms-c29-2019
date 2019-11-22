@@ -17,7 +17,7 @@ public class TestMain {
             return list;
         };
 
-        List<User> userList = new ArrayList<>();
+        var userList = new ArrayList<User>();
         userList.add(new User("Ann"));
         userList.add(new User("Alolo"));
         userList.add(new User("Aenda"));
@@ -29,5 +29,20 @@ public class TestMain {
 
         System.out.println(userList);
 
+        var ints = new ArrayList<Integer>();
+        ints.add(1);
+        ints.add(1);
+        show(ints);
+
+
+        String s = new String(" AA ");
+        String strip = s.strip();
+        System.out.println(s.stripTrailing().length());
+        System.out.println(s.trim().length());
+        System.out.println(s.repeat(10));
+    }
+
+    private static void show(List<Integer> integerList) {
+        System.out.println(integerList);
     }
 }
